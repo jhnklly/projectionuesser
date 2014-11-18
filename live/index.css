@@ -1,0 +1,218 @@
+* { 
+  box-sizing: border-box;
+  font-family: monospace, Consolas, 'Courier New';
+}
+
+html, body { 
+  margin:0; 
+  padding:0; 
+  color: #999 !important;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: #000;
+}
+
+#map { position:absolute; top:0; bottom:0; width:100%; }
+
+#map-ui {
+    position:absolute;
+    top:10px;right:10px;
+    z-index:100;
+    }
+    #map-ui ul {
+      list-style:none;
+      margin:0;padding:0;
+      }
+      #map-ui a {
+        font-size:13px;
+        background:#FFF;
+        color:#3C4E5A;
+        display:block;
+        margin:0;padding:0;
+        border:1px solid #BBB;
+        border-bottom-width:0;
+        min-width:138px;
+        padding:10px;
+        text-decoration:none;
+        }
+      #map-ui a:hover { background:#ECF5FA; }
+      #map-ui li:last-child a {
+        border-bottom-width:1px;
+        -webkit-border-radius:0 0 3px 3px;
+                border-radius:0 0 3px 3px;
+        }
+      #map-ui li:first-child a {
+        -webkit-border-radius:3px 3px 0 0;
+                border-radius:3px 3px 0 0;
+              }
+      #map-ui a.active {
+        background:#3887BE;
+        border-color:#3887BE;
+        color:#FFF;
+        }
+        #map-ui li:last-child a.active {
+          border-top-color:#FFF;
+          }
+
+.leaflet-control-zoom-in, .leaflet-control-zoom-out {
+  background-color: #777;
+}
+
+#the_dropzone {
+  z-index: 99;
+}
+
+.btn {
+  position: absolute;
+  z-index: 10;
+  padding: 2px 4px;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+.btn:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+#btn-demo {
+  top: 10px;
+  left: 50px;
+}
+
+#sieve {
+  position: absolute;
+  bottom: 5px;
+  left: 150px;
+  z-index: 9;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+#settings {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  z-index: 9;
+  font-family: monospace;
+  font-size: 11px;
+}
+
+.setting-input {
+  width: 50px;
+  font-family: monospace;
+  font-size: 11px;
+  background-color: transparent;
+  color: #999;
+  border: 1px solid #555;
+}
+
+.leaflet-popup-content {
+  width: 600px !important;
+  max-height: 300px ! important;
+  overflow: auto;
+  opacity: 0.8;
+
+}
+
+#waiter {
+  
+  opacity: 0.5;
+  background-color: #aaa;
+  color: #000;
+  font-size: 40vw;
+  font-weight: 700;
+  /*line-height: 100%;*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: table;
+}
+
+#waiter-text {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+#waitr {
+    border: 10px solid #000;
+    height: 20vw;
+    width: 0px;
+    margin: 9px auto;
+    -webkit-animation: waitr 1s linear infinite;
+    -moz-animation: waitr 1s linear infinite;
+    -o-animation: waitr 1s linear infinite;
+    animation: waitr 1s linear infinite;
+}
+
+@-webkit-keyframes waitr {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+
+@-moz-keyframes waitr {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+
+@-o-keyframes waitr {
+  from { -o-transform: rotate(0deg); }
+  to { -o-transform: rotate(360deg); }
+}
+
+@-keyframes waitr {
+  from { -transform: rotate(0deg); }
+  to { -transform: rotate(360deg); }
+}
+
+#help_button {
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid #aaa;
+  color: #aaa;
+  font-size: 19px;
+  font-weight: 700;
+  font-family: monospace, Consolas, "Courier New";
+  position: absolute;
+  bottom: 39px;
+  right: 10px;
+  z-index: 2900;
+  opacity: 0.7;
+}
+#help_button:hover {
+  opacity: 1.0;
+  cursor: pointer;
+  border-color: #fff;
+  color: #fff;  
+}
+
+/* http://stackoverflow.com/questions/306252/how-to-align-checkboxes-and-their-labels-consistently-cross-browsers */
+
+label {
+    display: block;
+    padding-left: 17px;
+    text-indent: -17px;
+}
+input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    margin-right: 2px;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+#sieve ul {
+  list-style-type: none;
+}
