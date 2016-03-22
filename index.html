@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Projectionuesser</title>
+
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+
+<link href='src/leaflet.css' rel='stylesheet' />
+<link href='src/leaflet-customcontrols.css' rel='stylesheet' />
+<link href='src/spectrum.css' rel='stylesheet' />
+<link href='src/index.css' rel='stylesheet' />
+
+
+</head>
+<body>
+
+
+
+<btn class="btn" id="btn-demo">...
+</btn>
+<!-- <btn class="btn" id="btn-settings">Cog</btn> -->
+
+<!-- <button class="gin_button" id="draw_point" name="draw_point" type="button">Upload</button> -->
+<div id='map'>
+<!--   <div id='map-ui'>
+
+    <ul>
+    </ul>
+  </div> -->
+</div>
+
+
+
+<div id="help_info" >
+    <div id="help_close">×</div>
+    <p>Projectionuesser is a projection guesser. One of the joys of map making is getting a shapefile without a projection. We eventually decided to stop doing those puzzles manually and wrote something that harnesses the power of PostGIS to try every single projection in its database. While imagining how you'd evaluate the projection guesses we suspected that it could also look a bit strange and whimsical. Click "Demo" to see. 
+    </p>
+
+    <p>If you have a shp with an unknown projection:
+        <ol>
+            <li>Zip your .shp + .shx (you don't need the dbf).
+            <li>Drag the .zip onto the map.
+              <ul>
+                <li>Wait.
+                <li>Continue to wait.
+                <li>Enjoy the psychedelic painting.
+              </ul>
+            <li>Zoom in to where you think your shape should be.
+            <li>Click on the shape that looks correct.
+            <li>Click on the .prj link (thanks <a target="_blank" href="http://epsg.io/">epsg.io!</a>).
+            <li>Save the contents of that page to your .prj file. (Rename it to match that of your .shp)
+        </ol>
+    </p>
+    
+    <p class="fine-print">
+        Works best with single polygons, as simplified as possible. Todo: sieve by size, &hellip;
+    </p>
+
+    <p class="center-text">
+      <a target="_blank" href="https://github.com/jhnklly/projectionuesser">Fork on github</a>
+      <br>
+      Hat tip: <a target="_blank" href="http://postgis.net/">PostGIS</a>, 
+      <a target="_blank" href="http://www.gdal.org/">OGR</a>, 
+      <a target="_blank" href="https://github.com/proj4js/proj4js">PROJ4</a>, 
+      <a target="_blank" href="epsg.io">epsg.io</a>
+    </p>
+</div>
+
+<form action="/file-upload"
+      class="dropzone"
+      id="the_dropzone">
+</form>
+
+
+<div id="settings" >
+  <div id="styler"></div>
+</div>
+
+<div id="sieve"></div>
+
+<div id="help_button" class="olButton" title="Help">?</div>
+
+<div id="waiter"  style="display:none;">
+    <div id="waiter-text">
+      WAIT
+      <div id="waiter-comment"></div>
+      <div id="waitr"></div>
+    </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script src='src/leaflet.js'></script>
+<script src="src/dropzone.js"></script>
+<script src="src/spectrum.js"></script>
+<script src="src/dropzone.js"></script>
+<script src="src/leaflet-customcontrols.js"></script>
+<!-- <script src="src/leaflet-easy-button.js"></script> -->
+<script src="src/map_constants.js"></script>
+<script src="src/index.js?v002"></script>
+<script src="src/leaflet-pip.js"></script>
+
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-56717623-1', 'websites.greeninfo.org');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>
