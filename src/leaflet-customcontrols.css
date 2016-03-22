@@ -1,0 +1,141 @@
+/* BASEMAP PICKER */
+
+.leaflet-control-basemapbar:hover {
+    /*width: calc(3*52)px;*/ number of basemaps * width of each button
+    position:absolute;
+    /*width: 156px;*/ /*number of basemaps * width of each button*/
+    right: 0;
+}
+.leaflet-control-basemapbar {
+    position:absolute;
+    display: inline-block; /*jmk*/
+    width: 156px;
+    right: 0;
+    /*-moz-transition-property: width;
+    -o-transition-property: width;
+    -webkit-transition-property: width;
+    transition-property: width;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear; */   
+}
+
+/*active:
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+hover:
+    background-color: black;
+    color: white;
+    opacity: 1.0;
+other:
+    background-color: black;
+    color: white;
+    opacity: 0.4;
+*/
+
+.leaflet-control-basemapbar > div {
+    display:inline-block;
+    background-color: transparent;
+    cursor:pointer;
+    padding:0.25em 1em 0.25em 1em;
+
+    visibility:visible;
+    opacity:1;
+    transition-delay:0s;
+
+}
+.leaflet-control-basemapbar-option {
+    border:1px solid rgba(255,255,255, 0.4);
+    width: 52px;
+    /*font-size:7pt;*/
+    background-color: black !important;
+    color: white !important;
+    opacity: 0.6 !important;
+
+    visibility:visible;
+    transition:visibility 0s linear 0.3s, opacity 0.3s linear;
+    -moz-transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+    -o-transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+    -webkit-transition: visibility 0s linear 0.3s, opacity 0.3s linear;    
+}
+.leaflet-control-basemapbar-option:hover {
+    background-color: black !important;
+    color: white !important;
+    opacity: 1.0 !important;
+}  
+.leaflet-control-basemapbar-option-active {
+    background-color: black !important;
+    color: white !important;
+    opacity: 0.8 !important;
+    float: right !important;
+}
+.leaflet-control-basemapbar-option:first-child {
+    border-bottom-left-radius:2.5px;
+    border-top-left-radius:2.5px
+}
+.leaflet-control-basemapbar-option:last-child {
+    border-bottom-right-radius:2.5px;
+    border-top-right-radius:2.5px;
+    border-right:0 none transparent;
+}
+.leaflet-control-basemapbar-open {
+    width: calc(3*52)px; /*number of basemaps * width of each button*/
+    border:1px solid rgba(255,255,255, 0.4);
+    border-radius:2px;
+    /*font-size:12px;*/ /* when expanded, they're 7pt but when closed it's sized to match everything else */
+}
+.leaflet-control-basemapbar-close {
+    width: 52px;
+    border:1px solid rgba(255,255,255, 0.4);
+    border-top-right-radius:2px;
+    border-bottom-right-radius:2px;
+    font-size:7pt; /* same size as the options defined above */
+}
+.leaflet-control-basemapbar .leaflet-control-basemapbar-hidden {
+    /*display:none;*/
+    visibility:hidden;
+    opacity:0;
+    transition:visibility 0s linear 0.3s, opacity 0.3s linear;
+    -moz-transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+    -o-transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+    -webkit-transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+}
+
+
+
+/*
+
+ 
+#width-duration-easein {
+  -moz-transition-property: width;
+  -o-transition-property: width;
+  -webkit-transition-property: width;
+  transition-property: width;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+  transition-duration: 2s;
+  -moz-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+ 
+.transition-example {
+  width: 40px;
+  height: 40px;
+  background: red;
+  margin: 20px;
+  border: 1px dotted yellow;
+}
+
+#width-duration-easein:hover {
+  width: 80px;
+}
+*/
